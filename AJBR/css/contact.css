@@ -1,0 +1,206 @@
+.heart {
+  opacity: 0.7;
+  position: relative;
+  height: 100px;
+  width: 100px;
+  margin: 10px auto;
+  background: whitesmoke;
+  border-radius: 50%;
+  border: 2px solid #e93924;
+  -webkit-box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
+          box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.heart::before,
+.heart::after {
+  content: '';
+  position: absolute;
+  height: 60px;
+  width: 40px;
+  background: #e93924;
+  border-radius: 50px 50px 0 0;
+}
+
+.heart::before {
+  left: 48px;
+  top: 23px;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  -webkit-transform-origin: 0 100%;
+          transform-origin: 0 100%;
+}
+
+.heart::after {
+  left: 9px;
+  top: 23px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transform-origin: 100% 100%;
+          transform-origin: 100% 100%;
+}
+
+.notice {
+  background-color: white;
+  max-width: 700px;
+  min-width: 300px;
+  margin: 0 auto;
+}
+
+.notice__title {
+  color: black;
+  font-size: 2em;
+  padding-top: 0;
+  margin-top: 1em;
+}
+
+.notice__message {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 4em 0;
+  padding: 0.25em;
+  font-weight: 600;
+  background-color: rgba(95, 158, 160, 0.2);
+  background-image: url("/img/world.png");
+  background-blend-mode: lighten;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
+          box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  -webkit-transform: translatey(-50px);
+          transform: translatey(-50px);
+  -webkit-animation: slideUp 2s ease forwards;
+          animation: slideUp 2s ease forwards;
+}
+
+@media screen and (min-width: 500px) {
+  .notice__message {
+    padding: 2.7em;
+  }
+}
+
+.notice__message span {
+  color: #e93924;
+  opacity: 0.7;
+  display: block;
+  background: white;
+  font-weight: 600;
+  padding: 0.25em;
+  margin: 0.5em 0;
+  border-radius: 5px;
+  -webkit-box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
+          box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.rates {
+  background: #d2e8fc;
+  max-width: 700px;
+  margin: 4em auto;
+  -webkit-box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
+          box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.rates__title {
+  padding: 0.5em;
+  color: black;
+}
+
+.rates__lead {
+  font-size: 1.2rem;
+}
+
+.contact-section {
+  max-width: 700px;
+  margin: 4em auto;
+  min-width: 300px;
+  border: 1px solid #56b6df;
+}
+
+.contact-section__company-info {
+  background-color: rgba(210, 232, 252, 0.7);
+  background-repeat: no-repeat;
+  background-image: url("/img/lotus-flower (2).png");
+  background-position-y: 85px;
+  background-position-x: 50%;
+  background-blend-mode: lighten;
+}
+
+.contact-section__heading {
+  color: #56b6df;
+  padding: 1em;
+  background: white;
+  opacity: 0.7;
+}
+
+.contact-section__ul {
+  font-size: 1.2em;
+  list-style: none;
+  padding: 1em;
+}
+
+.contact-section__ul a {
+  text-decoration: none;
+  color: black;
+}
+
+.contact-section__icon {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.contact-section__links {
+  margin-bottom: 1.5em;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.contact-section label {
+  margin-bottom: 1em;
+  display: block;
+  padding: 0.25em;
+  font-size: 1.3rem;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.contact-section input,
+.contact-section textarea {
+  margin-bottom: 1em;
+  padding: 0.25em;
+  font-size: 1.1rem;
+  text-align: center;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+  font-family: "Buda", cursive;
+  width: 80%;
+}
+
+.contact-section input:focus, .contact-section input:focus,
+.contact-section textarea:focus,
+.contact-section textarea:focus {
+  outline-color: #ee6352;
+}
+
+@-webkit-keyframes slideUp {
+  100% {
+    -webkit-transform: translatey(0);
+            transform: translatey(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  100% {
+    -webkit-transform: translatey(0);
+            transform: translatey(0);
+    opacity: 1;
+  }
+}
+/*# sourceMappingURL=contact.css.map */
